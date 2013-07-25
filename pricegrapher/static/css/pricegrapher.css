@@ -1,0 +1,27 @@
+.block {
+    margin: 12px 0px 12px 0px;
+    background: rgba(179, 209, 255, 0.60);
+    padding: 0px 0px 12px 0px;
+    border-radius: 10px;
+}
+.centertext {
+    text-align: center;
+}
+
+#url-input {
+    height: 30px;
+    width: 400px;
+}
+
+.texture {
+    background-image: url("../img/texturebg.png");
+}
+
+.error-text {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.error-box {
+    margin-top: 20px;
+}

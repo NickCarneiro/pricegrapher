@@ -1,0 +1,27 @@
+{% extends 'layout.htm' %}
+
+{% block scripts %}
+<script src="http://www.google.com/jsapi"></script>
+<script>
+  google.load('visualization', '1', {'packages': ['annotatedtimeline']});
+  google.setOnLoadCallback(function drawChart() {
+    var visualization = google.visualization;
+    var data = new visualization.DataTable({% autoescape off %}{{ data }}{% endautoescape %});
+    var chart = new visualization.AnnotatedTimeLine($('#chart_div')[0]);
+    chart.draw(data);
+  });
+</script>
+{% endblock %}
+
+{% block head-title %}{{ product.title }}{% endblock %}
+{% block body-title %}{{ product.title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="span12 block centertext">
+      <h2>{{ price }}</h2>
+    <div id="chart_div" style="width: 100%; height: 240px"></div>
+  </div>
+</div>
+{% endblock %}
+

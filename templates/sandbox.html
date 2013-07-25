@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<body>
+<h1> How to iterate over a list of models:  </h1>
+
+Here is a list of sources
+<ul>
+    {% for product in products %}
+    <li>{{ product }}
+    <p>{{ product.description }}</p>
+    </li>
+    {% endfor %}
+</ul>
+<img src="/static/img/mrscraperlogo.png" />
+</body>
